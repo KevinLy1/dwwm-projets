@@ -1,0 +1,395 @@
+/**************** Police ****************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/**************** Général ****************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/azamat-esmurziyev-7YD8af-OobI-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+
+/**************** Header ****************/
+
+header {
+    padding: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    width: 85%;
+    margin-top: 2em;
+    padding: 1em;
+    border: 1px solid #fff;
+    border-radius: 1em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    padding: 1em 2em;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li:hover a {
+    background-color: #000;
+    color: #fff;
+}
+
+.description {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.description img {
+    width: 20%;
+    height: auto;
+}
+
+.description h1 {
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.description p {
+    color: #fff;
+    text-align: center;
+    width: 80%;
+}
+
+.description .maquette {
+    color: orangered;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/**************** Main ****************/
+/**************** Articles ****************/
+
+#article {
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 5%;
+}
+
+.article-container {
+    width: 35%;
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article-container-icon {
+    width: 100%;
+    height: 8em;
+}
+
+.icon-1 {
+    background-image: url(../img/ordinateur.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-2 {
+    background-image: url(../img/parametres.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-3 {
+    background-image: url(../img/appareil-photo-numerique.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-4 {
+    background-image: url(../img/verifie.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.article-container-text {
+    width: 100%;
+}
+
+/**************** Main ****************/
+/**************** Parallax ****************/
+
+.parallax {
+    height: 10em;
+}
+
+/**************** Main ****************/
+/**************** Gallery ****************/
+
+#gallery {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-main-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 5%;
+}
+
+.gallery-container {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery-container-img {
+    width: 50%;
+    height: 10em;
+    margin-bottom: 1em;
+}
+
+.gallery-container-img:hover {
+    transform: scale(2);
+    transition-duration: 1s;
+}
+
+.img-1 {
+    background-image: url(../img/chris-karidis-nnzkZNYWHaU-unsplash.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-2 {
+    background-image: url(../img/david-kohler-VFRTXGw1VjU-unsplash.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-3 {
+    background-image: url(../img/daniel-corneschi-N6HTCyN50p0-unsplash.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-container-subtitle {
+    width: 100%;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.btn-gallery {
+    background-color: rgb(19, 23, 42);
+    border: 1px solid rgb(19, 23, 42);
+    border-radius: .2em;
+    color: #fff;
+    text-transform: uppercase;
+    padding: .5em;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 1em;
+}
+
+.btn-gallery:hover {
+    background-color: rgb(203, 124, 33);
+    border: 1px solid rgb(203, 192, 33);
+    color: #fff;
+}
+
+/**************** Main ****************/
+/**************** About & Contact ****************/
+
+.about-and-contact {
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+}
+
+/**************** About ****************/
+
+.about {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about h3 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about-items-container {
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 20em;
+}
+
+.about-items {
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+
+.about-items-icon {
+    width: 50%;
+    height: 4em;
+}
+
+.about-icon-1 {
+    background-image: url(../img/adresse.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-icon-2 {
+    background-image: url(../img/social.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-icon-3 {
+    background-image: url(../img/courrier.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-icon-4 {
+    background-image: url(../img/telephone.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-items-text h4 {
+    color: #fff;
+}
+
+.about-items-text p {
+    width: 100%;
+    color: #fff;
+}
+
+.about-items-text a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/**************** Main ****************/
+/**************** Contact ****************/
+
+.contact-container {
+    width: 45%;
+}
+
+.contact-container h3 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contact-container-items {
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 20em;
+}
+
+.contact-container-items input[type="text"], .contact-container input[type="email"] {
+    width: 45%;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.contact-container-items textarea {
+    resize: vertical;
+    width: 100%;
+    height: 10em;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.btn-contact {
+    background-color: rgb(19, 23, 42);
+    border: 1px solid rgb(19, 23, 42);
+    border-radius: .2em;
+    color: #fff;
+    text-transform: uppercase;
+    padding: .5em;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.btn-contact:hover {
+    background-color: rgb(203, 124, 33);
+    border: 1px solid rgb(203, 192, 33);
+    color: #fff;
+}
+
+/**************** Footer ****************/
+
+footer {
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    height: 4em;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}

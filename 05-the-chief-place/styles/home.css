@@ -1,0 +1,82 @@
+.max-width-body {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* HOME */
+.text-beige {
+    color: #eeebd0 !important;
+}
+
+.btn-beige {
+    color: #000;
+    background-color: #eeebd0 !important;
+    border-color: #eeebd0 !important;
+}
+
+.btn-beige:hover {
+    color: #000 !important;
+    background-color: #f1eed7 !important;
+    border-color: #f0edd5 !important;
+}
+
+.sushi {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 60%;
+    transform: translate(0, -50%);
+}
+
+.home-height {
+    padding-bottom: 20vw;
+}
+
+.playfair-font {
+    font-family: "Playfair Display", serif;
+}
+
+/* FOOD PRESENTATION */
+
+.bg-beige {
+    background-color: #eeebd0 !important;
+}
+
+.text-dark-1 {
+    color: #3d3a4b !important;
+}
+
+.bg-dark-1 {
+    background-color: #3d3a4b !important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* DREAM TEAM */
+
+.object-pos-top {
+    object-position: 50% 30%;
+}
+
+.h-300 {
+    height: 300px !important;
+}
+
+.btn-shade-red-1 {
+    color: #fff !important;
+    background-color: #c33838 !important;
+    border-color: #c33838 !important;
+}
+
+/* MOSAIC SECTION */
+
+.bg-main-red {
+    background-color: #c70a0a !important;
+}
+
+.h-400 {
+    height: 400px !important;
+}

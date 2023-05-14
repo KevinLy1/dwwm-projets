@@ -1,0 +1,48 @@
+.titreForm {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.formulaire {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.formulaire form {
+    width: 60%;
+}
+
+.formulaire form .row {
+    width: 100%;
+}
+
+.formulaire form .row input, .formulaire form .row textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulaire form .row textarea {
+    height: 150px;
+    resize: none;
+}
+
+.formulaire form .row .subBtn {
+    width: 30%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.formulaire form .row .subBtn:hover {
+    color: #f1f1f1;
+    background-color: midnightblue;
+}
+
+.formulaire form .row:nth-child(2), .formulaire form .row:nth-child(3) {
+    margin-top: 30px;
+}
