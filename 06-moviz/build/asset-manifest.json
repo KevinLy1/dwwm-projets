@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dwwm-projets/06-moviz/build/static/css/main.bec065b5.css",
+    "main.js": "/dwwm-projets/06-moviz/build/static/js/main.872d7036.js",
+    "index.html": "/dwwm-projets/06-moviz/build/index.html",
+    "main.bec065b5.css.map": "/dwwm-projets/06-moviz/build/static/css/main.bec065b5.css.map",
+    "main.872d7036.js.map": "/dwwm-projets/06-moviz/build/static/js/main.872d7036.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bec065b5.css",
+    "static/js/main.872d7036.js"
+  ]
+}
