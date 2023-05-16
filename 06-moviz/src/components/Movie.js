@@ -23,7 +23,7 @@ function Movie(props) {
   let [watchCount, setWatchCount] = useState(0);
 
   const handleMovie = () => {
-    setWatchCount(watchCount++);
+    setWatchCount(watchCount + 1);
   };
   
   let videoIconStyle = {cursor : 'pointer'};
