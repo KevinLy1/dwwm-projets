@@ -23,7 +23,6 @@ Compilation de mes projets réalisés dans le cadre de la formation "Développeu
 
 # 🎈 PHP
 
-| Projet       | Dépôt                                                                  | Démo | Commentaire                                                       |
-| ------------ | ---------------------------------------------------------------------- | ---- | ----------------------------------------------------------------- |
-| **Boutique** | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/08-boutique) | -    | Travaux Pratiques\Projet de boutique réalisé pendant la formation |
-| **Todolist** | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/09-todolist) | -    | Évaluation passée en Cours de Formation (ECF2 - Back-end)         |
+| Projet       | Dépôt                                                                  | Démo | Commentaire                                               |
+| ------------ | ---------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
+| **Todolist** | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/08-todolist) | -    | Évaluation passée en Cours de Formation (ECF2 - Back-end) |
