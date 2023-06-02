@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Gaming Application</title>
+    <!-- Font Awesome 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="#">Cloud Gaming App.</a></h1>
+            <div id="expand-menu-btn"><i class=" fa-solid fa-bars"></i></div>
+            <ul id="menu" class="menu-hidden">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#pricing">Tarifs</a></li>
+                <li><a href="#popular">Jeux populaires</a></li>
+                <li><a href="#reviews">Avis de presse</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>La référence du Cloud Gaming, c'est ici !</h2>
+            <p>Lassé d'investir dans du matériel pour pouvoir jouer aux jeux vidéos dernier cri ? La solution est toute trouvée : le cloud gaming !</p>
+            <p>Avec seulement une connexionn internet, le jeu vidéo n'a jamais été aussi accessible et ce, sur n'importe quelle plateforme et sans investissement lourd.</p>
+            <p>Découvrez nos <a href="#pricing">tarifs</a>.</p>
+        </section>
+        <section id="pricing">
+            <h2>Tarifs</h2>
+            <div class="pricing-container">
+                <div class="pricing-container-item">
+                    <h3>Gratuit</h3>
+                    <ul>
+                        <li>Limite à 2 heures/jour</li>
+                        <li>Qualité de 720p</li>
+                        <li>1 session</li>
+                    </ul>
+                    <p>Prix : 0 €/mois</p>
+                    <p><a href="#" class="button">Souscrire à cette formule</a></p>
+                </div>
+                <div class="pricing-container-item">
+                    <h3>Standard</h3>
+                    <ul>
+                        <li>Limite à 8 heures/jour</li>
+                        <li>Qualité de 1080p</li>
+                        <li>2 sessions</li>
+                    </ul>
+                    <p>Prix : 19,99 €/mois</p>
+                    <p><a href="#" class="button">Souscrire à cette formule</a></p>
+                </div>
+                <div class="pricing-container-item">
+                    <h3>Premium</h3>
+                    <ul>
+                        <li>Illimité</li>
+                        <li>Qualité de 1080p</li>
+                        <li>4 sessions</li>
+                    </ul>
+                    <p>Prix : 39,99 €/mois</p>
+                    <p><a href="#" class="button">Souscrire à cette formule</a></p>
+                </div>
+                <div class="pricing-container-item">
+                    <h3>Ultra</h3>
+                    <ul>
+                        <li>Illimité</li>
+                        <li>Qualité de 4K</li>
+                        <li>6 sessions</li>
+                    </ul>
+                    <p>Prix : 69,99 €/mois</p>
+                    <p><a href="#" class="button">Souscrire à cette formule</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="popular">
+            <h2>Jeux populaires</h2>
+            <p>Cliquer sur un jeu pour pouvoir y jouer !</p>
+            <p>Source des images : <a href="https://rawg.io/" target="_blank">https://rawg.io/</a></p>
+            <div class="popular-container"></div>
+            <p><a href="#" class="button">Accéder à tout le catalogue</a></p>
+        </section>
+        <section id="reviews">
+            <h2>Avis de presse</h2>
+            <div class="reviews-container">
+                <article class="reviews-container-item">
+                    <h3>La presse française</h3>
+                    <p>Cloud Gaming App. est la meilleure application de cloud gaming, unanimement votée par l'ensemble de la presse française.</p>
+                </article>
+                <article class="reviews-container-item">
+                    <h3>The International News</h3>
+                    <p>Cloud Gaming App. is the best cloud gaming application ever created !</p>
+                </article>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-container">
+                <select class="contact-container-item">
+                    <option selected disabled>Type de demande</option>
+                    <option value="contact">Contact général</option>
+                    <option value="support">Demande de support</option>
+                </select>
+            
+                <input class="contact-container-item" type="text" name="name" id="name" placeholder="Nom">
+                <span id="checkName"></span>
+                <input class="contact-container-item" type="email" name="email" id="email" placeholder="Adresse e-mail">
+                <span id="checkEmail"></span>
+                <textarea class="contact-container-item" name="message" id="message"></textarea>
+                <span id="checkMessage"></span>
+                <input type="submit" value="Envoyer" class="button button-error" disabled>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; Kevin Ly - 2023. Tous droits réservés.</p>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
