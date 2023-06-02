@@ -34,7 +34,7 @@ function isTaskSet($id_task) {
     return $pdo->query($taskQuery)->fetch(PDO::FETCH_ASSOC);
 }
 
-// Mis à jour des status de la tâche
+// Mise à jour du statut de la tâche
 function updateTask($id_task, $status) {
     global $pdo;
     $updateQuery = $pdo->prepare("UPDATE tasks SET status = :status WHERE id_task = :id_task");
