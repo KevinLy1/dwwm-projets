@@ -37,7 +37,7 @@ if ($_GET) {
 
 require_once("./include/header.php");
 ?>
-    <?= (!empty($successUpdate) ? $successUpdate : (!empty($errorUpdate) ? $errorUpdate : "")) ?>
+    <?php echo (!empty($successUpdate) ? $successUpdate : (!empty($errorUpdate) ? $errorUpdate : "")) ?>
     <div class="row mt-5">
         <div class="col">
             <div class="card text-dark bg-subtle mb-3 h-100">
@@ -50,10 +50,10 @@ require_once("./include/header.php");
                             <?php foreach (findTasks(4) as $task) : ?>
                                 <li class="list-group-item">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span><?= $task['description'] ?></span>
-                                        <a href="?action=delete&id_task=<?= $task['id_task'] ?>" class="text-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')"><i class="fas fa-trash-alt"></i></a>
+                                        <span><?php echo $task['description'] ?></span>
+                                        <a href="?action=delete&id_task=<?php echo $task['id_task'] ?>" class="text-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')"><i class="fas fa-trash-alt"></i></a>
                                     </div>
-                                    <div class="small text-muted"><?= date('d/m/Y à H:i:s', strtotime($task['date_task'])) ?></div>
+                                    <div class="small text-muted"><?php echo date('d/m/Y à H:i:s', strtotime($task['date_task'])) ?></div>
                                 </li>
                             <?php endforeach; ?>
                         </ul>

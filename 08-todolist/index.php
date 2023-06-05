@@ -115,7 +115,7 @@ if ($_GET) {
 require_once("./include/header.php");
 ?>
     <h2 class="mt-5">Ajouter une tâche</h2>
-    <?= (!empty($successCreation) ? $successCreation : (!empty($errorCreation) ? $errorCreation : "")) ?>
+    <?php echo (!empty($successCreation) ? $successCreation : (!empty($errorCreation) ? $errorCreation : "")) ?>
     <form method="POST">
         <div class="mb-3">
             <label for="description" class="form-label">Description de la tâche (5 caractères minimum et 50 caractères maximum)</label>
@@ -125,7 +125,7 @@ require_once("./include/header.php");
     </form>
 
     <h2 class="my-5">Consultation des tâches</h2>
-    <?= (!empty($successUpdate) ? $successUpdate : (!empty($errorUpdate) ? $errorUpdate : "")) ?>
+    <?php echo (!empty($successUpdate) ? $successUpdate : (!empty($errorUpdate) ? $errorUpdate : "")) ?>
     <div class="row">
 
         <div class="col">
@@ -139,13 +139,13 @@ require_once("./include/header.php");
                             <?php foreach (findTasks(1) as $task) : ?>
                                 <li class="list-group-item">
                                     <div class="row d-flex justify-content-between">
-                                        <span class="col-9"><?= $task['description'] ?></span>
+                                        <span class="col-9"><?php echo $task['description'] ?></span>
                                         <div class="col-3 d-flex align-items-center justify-content-evenly">
-                                            <a href="?action=update_status&id_task=<?= $task['id_task'] ?>&status=2" class="text-dark"><i class="fas fa-arrow-right"></i></a>
-                                            <a href="?action=delete&id_task=<?= $task['id_task'] ?>" class="text-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')"><i class="fas fa-trash-alt"></i></a>
+                                            <a href="?action=update_status&id_task=<?php echo $task['id_task'] ?>&status=2" class="text-dark"><i class="fas fa-arrow-right"></i></a>
+                                            <a href="?action=delete&id_task=<?php echo $task['id_task'] ?>" class="text-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')"><i class="fas fa-trash-alt"></i></a>
                                         </div>
                                     </div>
-                                    <div class="small text-muted"><?= date('d/m/Y à H:i:s', strtotime($task['date_task'])) ?></div>
+                                    <div class="small text-muted"><?php echo date('d/m/Y à H:i:s', strtotime($task['date_task'])) ?></div>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
@@ -167,14 +167,14 @@ require_once("./include/header.php");
                             <?php foreach (findTasks(2) as $task) : ?>
                                 <li class="list-group-item">
                                     <div class="row d-flex justify-content-between">
-                                        <span class="col-8"><?= $task['description'] ?></span>
+                                        <span class="col-8"><?php echo $task['description'] ?></span>
                                         <div class="col-4 d-flex align-items-center justify-content-evenly">
-                                            <a href="index.php?action=update_status&id_task=<?= $task['id_task'] ?>&status=1" class="text-dark"><i class="fas fa-arrow-left"></i></a>
-                                            <a href="?action=update_status&id_task=<?= $task['id_task'] ?>&status=3" class="text-dark"><i class="fas fa-arrow-right"></i></a>
-                                            <a href="?action=delete&id_task=<?= $task['id_task'] ?>" class="text-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')"><i class="fas fa-trash-alt"></i></a>
+                                            <a href="index.php?action=update_status&id_task=<?php echo $task['id_task'] ?>&status=1" class="text-dark"><i class="fas fa-arrow-left"></i></a>
+                                            <a href="?action=update_status&id_task=<?php echo $task['id_task'] ?>&status=3" class="text-dark"><i class="fas fa-arrow-right"></i></a>
+                                            <a href="?action=delete&id_task=<?php echo $task['id_task'] ?>" class="text-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')"><i class="fas fa-trash-alt"></i></a>
                                         </div>
                                     </div>
-                                    <div class="small text-muted"><?= date('d/m/Y à H:i:s', strtotime($task['date_task'])) ?></div>
+                                    <div class="small text-muted"><?php echo date('d/m/Y à H:i:s', strtotime($task['date_task'])) ?></div>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
@@ -196,14 +196,14 @@ require_once("./include/header.php");
                             <?php foreach (findTasks(3) as $task) : // findTasks($statut) au $statut = 3 => statut "Terminée" ?>
                                 <li class="list-group-item">
                                     <div class="row d-flex justify-content-between">                                    
-                                        <span class="col-9"><?= $task['description'] ?></span>
+                                        <span class="col-9"><?php echo $task['description'] ?></span>
                                         <div class="col-3 d-flex align-items-center justify-content-evenly">
-                                            <a href="?action=update_status&id_task=<?= $task['id_task'] ?>&status=2" class="text-dark"><i class="fas fa-arrow-left"></i></a>
-                                            <a href="?action=delete&id_task=<?= $task['id_task'] ?>" class="text-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')"><i class="fas fa-trash-alt"></i></a>
-                                            <a href="?action=archive&id_task=<?= $task['id_task'] ?>&status=4" class="text-subtle" onclick="return confirm('Êtes-vous sûr de vouloir archiver cette tâche ?')"><i class="fas fa-archive"></i></a>
+                                            <a href="?action=update_status&id_task=<?php echo $task['id_task'] ?>&status=2" class="text-dark"><i class="fas fa-arrow-left"></i></a>
+                                            <a href="?action=delete&id_task=<?php echo $task['id_task'] ?>" class="text-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?')"><i class="fas fa-trash-alt"></i></a>
+                                            <a href="?action=archive&id_task=<?php echo $task['id_task'] ?>&status=4" class="text-subtle" onclick="return confirm('Êtes-vous sûr de vouloir archiver cette tâche ?')"><i class="fas fa-archive"></i></a>
                                         </div>
                                     </div>
-                                    <div class="small text-muted"><?= date('d/m/Y à H:i:s', strtotime($task['date_task'])) ?></div>
+                                    <div class="small text-muted"><?php echo date('d/m/Y à H:i:s', strtotime($task['date_task'])) ?></div>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
