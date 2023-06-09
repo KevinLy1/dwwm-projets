@@ -21,8 +21,9 @@ Compilation de mes projets réalisés dans le cadre de la formation "Développeu
 | **Moviz (version front-end et back-end)** | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/06-moviz-fe-be)      | -                                                                    | Variante : application construite avec Next.js + partie backend       |
 | **Cloud Gaming Application**              | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/07-cloud-gaming-app) | [Démo](https://kevinly1.github.io/dwwm-projets/07-cloud-gaming-app/) | Évaluation passée en Cours de Formation (ECF1 - Front-end)            |
 
-# 🎈 PHP
+# 🎈 PHP Procédural
 
-| Projet       | Dépôt                                                                  | Démo | Commentaire                                               |
-| ------------ | ---------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
-| **Todolist** | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/08-todolist) | -    | Évaluation passée en Cours de Formation (ECF2 - Back-end) |
+| Projet                 | Dépôt                                                                  | Démo | Commentaire                                               |
+| ---------------------- | ---------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
+| **Todolist**           | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/08-todolist) | -    | Évaluation passée en Cours de Formation (ECF2 - Back-end) |
+| **Blog communautaire** | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/09-blog)     | -    | Projet back-end réalisé sur 5 jours                       |
