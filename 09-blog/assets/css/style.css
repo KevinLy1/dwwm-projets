@@ -1,0 +1,115 @@
+/* General */
+html {
+    min-height: 100vh;
+    position: relative;
+}
+
+main {
+    padding-bottom: 56px;
+}
+
+footer {
+    bottom: 0;   
+}
+
+/* Formulaires identifiants */
+#oeil, #oeilActuelMdp, #oeilNouveauMdp {
+    cursor: pointer;
+}
+
+/* Cards */
+.card-img-top {
+    max-width: 100% !important;
+    height: 200px !important;
+}
+
+/* Articles (article.php) */
+.article-section {
+    padding: 30px;
+}
+
+.article-header {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.article-content {
+    background-color: #fff;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.article-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.article-subtitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    margin-bottom: 20px;
+}
+
+.article-image {
+    text-align: center;
+}
+
+.article-image img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.article-text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.comment {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+.comment-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.comment-delete {
+    color: #ff5757;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+    margin-left: 10px;
+}
+
+.comment-delete:hover {
+    color: #ff0000;
+}
+
+.comment-content p {
+    margin: 0;
+    line-height: 1.5;
+    color: #555;
+    font-size: 15px;
+}
