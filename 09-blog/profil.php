@@ -2,14 +2,13 @@
 require_once("./inc/init.php");
 $pageTitle = "Profil";
 
-// Redirection vers la racine si l'utilisateur n'est pas connecté
+// Redirection vers la page de connexion si l'utilisateur n'est pas connecté
 if(!isConnected()) {
     header("location:" . URLSITE . "connexion.php");
     exit();
 }
 
 // Récupération des informations de l'utilisateur pour sa page profil
-// $userData = goSQL("SELECT * FROM users u LEFT JOIN posts p ON u.id_user = p.id_user LEFT JOIN comments c ON p.id_user = c.id_user WHERE u.id_user = :id_user", array("id_user" => $_SESSION["user"]["id_user"]))->fetchAll();
 $userData = goSQL("SELECT * FROM users WHERE id_user = :id_user", array("id_user" => $_SESSION["user"]["id_user"]))->fetch();
 
 // Statistiques utilisateur

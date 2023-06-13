@@ -29,10 +29,16 @@ if ($_GET) {
         // Cas 1 : Mise à jour du statut de la tâche
         if ($_GET['action'] == 'update_status') { 
             if (array_key_exists("id_task", $_GET) && is_numeric($_GET['id_task'])) { // Vérifier si l'ID de la tâche est spécifié et qu'il est bien au format numérique
-                if (isTaskSet($_GET['id_task'])) { // si la tâche existe
-                    updateTask($_GET['id_task'], $_GET['status']); // le statut se met à jour
-                    header("location: ?success=update&id_task=$_GET[id_task]"); // Rediriger pour afficher le message de succès
-                    exit();
+                if(isTaskSet($_GET['id_task'])) { // si la tâche existe
+                    if(is_numeric($_GET['status']) && $_GET["status"] > 0 && $_GET["status"] <= 4) {
+                        updateTask($_GET['id_task'], $_GET['status']); // le statut se met à jour
+
+                        header("location: ?success=update&id_task=$_GET[id_task]"); // Rediriger pour afficher le message de succès
+                        exit();
+                    }
+                    else {
+                        $errorUpdate .= "<div class='alert alert-danger'>Impossible de mettre à jour le statut.</div>";
+                    }
                 }
                 else {
                     $errorUpdate .= "<div class='alert alert-danger'>La tâche $_GET[id_task] n'existe pas et ne peut donc pas être mise à jour.</div>";
