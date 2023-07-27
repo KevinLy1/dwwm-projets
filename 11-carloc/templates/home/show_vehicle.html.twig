@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container text-center mt-5">
+        <a href="{{ path("inventory") }}" class="btn btn-primary mb-5">Retour au catalogue</a>
+        <h1>Détail du véhicule : {{ vehicle.title }}</h1>
+        <h2>Prix : {{ vehicle.dailyPrice }} €</h2>
+        <div class="card mt-5" style="width: 50rem; margin: 0 auto;">
+            <img src="{{ asset("assets/img/vehicles/" ~ vehicle.photo) }}" alt="Photo du véhicule">
+
+            <div class="card-body">
+                <p>{{ vehicle.description | raw }}</p>
+            </div>
+
+            <div class="card-footer">
+                <table class="table table-bordered">
+                    <tr style="background: #8900E5; color: white;">
+                        <th scope="col">Date de publication</th>
+                        <th scope="col">Dernière mise à jour</th>
+                    </tr>
+                    <tr>
+                        <td>{{ vehicle.createdAt | date("d/m/Y") }}</td>
+                        <td>{{ vehicle.updatedAt | date("d/m/Y") }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

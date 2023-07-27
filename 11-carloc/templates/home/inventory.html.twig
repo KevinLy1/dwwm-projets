@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container d-flex justify-content-around flex-wrap">
+        {% for vehicle in vehicles %}
+            <div class="card text-center mb-4" style="width: 25rem;">
+                <img src="{{ asset("assets/img/vehicles/" ~ vehicle.photo) }}" class="card-image-top" alt="Image de l'vehicle" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ vehicle.title }}</h5>
+                    <p class="card-text my-3">{{ vehicle.description | slice(0,200) | raw }}</p>
+                </div>
+
+                <p class="mb-0">Ajouté le {{ vehicle.createdAt | date("d/m/Y") }}</p>
+                <p class="mb-0">Mis à jour le {{ vehicle.updatedAt | date("d/m/Y") }}</p>
+
+                <div class="card-footer">
+                    <p class="card-text fw-bold">Prix journalier : {{ vehicle.dailyPrice }} €</p>
+                    <a href="{{ path("show_vehicle", { "id" : vehicle.id }) }}" class="btn btn-primary">Consulter plus de détails</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

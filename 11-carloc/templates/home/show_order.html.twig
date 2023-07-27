@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container text-center mt-5">
+        <a href="{{ path("my_orders") }}" class="btn btn-primary mb-5">Retour à liste des commandes</a>
+        <h1>Détail de la commande #{{ order.id }}</h1>
+
+        <table class="table table-bordered table-striped table-hover text-center mt-5">
+            <thead>
+                <tr>
+                    <th>Véhicule</th>
+                    <th>Prix</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vehicle in order.getIdVehicle() %}
+                <tr>
+                    <td>{{ vehicle.title }}</td>
+                    <td>{{ vehicle.dailyPrice }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td class="fw-bold">Total</td>
+                    <td class="fw-bold">{{ order.totalPrice }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

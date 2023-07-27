@@ -27,3 +27,10 @@ Compilation de mes projets réalisés dans le cadre de la formation "Développeu
 | ---------------------- | ---------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
 | **Todolist**           | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/08-todolist) | -    | Évaluation passée en Cours de Formation (ECF2 - Back-end) |
 | **Blog communautaire** | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/09-blog)     | -    | Projet back-end réalisé sur 5 jours                       |
+
+# 🎈 PHP Orienté Objet
+
+| Projet              | Dépôt                                                                         | Démo | Commentaire                                      |
+| ------------------- | ----------------------------------------------------------------------------- | ---- | ------------------------------------------------ |
+| **CRUD Entreprise** | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/10-crud-entreprise) | -    |                                                  |
+| **Carloc**          | [Lien](https://github.com/KevinLy1/dwwm-projets/tree/main/11-carloc)          | -    | Projet réalisé sur 4-5 jours à l'aide de Symfony |

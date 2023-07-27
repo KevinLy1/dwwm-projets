@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if not editMode %}
+        <h1>Créer un véhicule</h1>
+    {% else %}
+        <h1>Édition du véhicule</h1>
+    {% endif %}
+
+    {{ form_errors(formVehicle) }}
+
+    {{ form_start(formVehicle) }}
+        {{ form_row(formVehicle.title, { 'label': 'Nom' }) }}
+        {{ form_row(formVehicle.brand, { 'label': 'Marque' }) }}
+        {{ form_row(formVehicle.model, { 'label': 'Modèle' }) }}
+        {{ form_row(formVehicle.description, { 'label': 'Description du véhicule' }) }}
+        {{ form_row(formVehicle.dailyPrice, { 'label': 'Prix journalier (€)' }) }}
+        {{ form_row(formVehicle.imageFile, { label: "Ajouter une image" }) }}
+
+        <button type="submit" class="btn btn-primary mt-3">💾 Valider</button>
+    {{ form_end(formVehicle) }}
+{% endblock %}

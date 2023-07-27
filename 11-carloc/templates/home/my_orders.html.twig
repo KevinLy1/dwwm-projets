@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container d-flex justify-content-around flex-wrap">
+        {% for myOrder in myOrders %}
+            <div class="card text-center mb-4" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Commande #{{ myOrder.id }}</h5>
+                    <ul class="mb-0">
+                        {% for vehicle in myOrder.getIdVehicle() %}
+                            <li>{{ vehicle.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <table class="table table-bordered table-striped table-hover text-center">
+                    <tr>
+                        <th>Prix total</th>
+                        <th>Passée le</th>
+                    </tr>
+                    <tr>
+                        <td>{{ myOrder.totalPrice }} €</td>
+                        <td>{{ myOrder.createdAt | date("d/m/Y à H:i:s") }}</td>
+                    </tr>
+                </table>
+
+                <table class="table table-bordered table-striped table-hover text-center">
+                    <tr>
+                        <th>Date de départ</th>
+                        <th>Date de rendu</th>
+                    </tr>
+                    <tr>
+                        <td>{{ myOrder.dateTimeDeparture | date("d/m/Y à H:i:s") }}</td>
+                        <td>{{ myOrder.dateTimeEnd | date("d/m/Y à H:i:s") }}</td>
+                    </tr>
+                </table>
+
+                <div class="card-footer">
+                    <a href="{{ path("show_order", { "id" : myOrder.id }) }}" class="btn btn-primary mb-1">Consulter plus de détails</a>
+                    <a href="{{ path("order_edit", { "id" : myOrder.id }) }}" class="btn btn-primary">Éditer la commande</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

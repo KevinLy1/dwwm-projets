@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Location</h1>
+
+    {{ form_errors(formOrder) }}
+
+    {{ form_start(formOrder) }}
+        {% if adminEditMode is defined and adminEditMode or adminCreateMode is defined and adminCreateMode %}
+            {{ form_row(formOrder.idUser, { 'label': 'Utilisateur' }) }}
+        {% endif %}
+    
+        {{ form_row(formOrder.idVehicle, { 'label': 'Véhicule' }) }}
+        <span id="totalDailyPrice" class="fw-bold"></span>
+
+        <div class="w-50">
+            {{ form_row(formOrder.dateTimeDeparture, { 'label': 'Date de début de location' }) }}
+            {{ form_row(formOrder.dateTimeEnd, { 'label': 'Date de fin de location' }) }}
+        </div>
+        <span id="totalDays" class="fw-bold"></span>
+
+        <p id="totalPrice" class="fw-bold"></p>
+        
+        <button type="submit" class="btn btn-primary mt-3">💾 Valider</button>
+    {{ form_end(formOrder) }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('assets/js/price.js') }}"></script>
+{% endblock %}

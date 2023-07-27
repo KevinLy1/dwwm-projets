@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="text-center my-5">
+        <h1 class="my-4">Gestion des commandes</h1>
+        <div class="alert alert-info">💬 Vous trouverez ci-dessous le tableau contenant l'ensemble des commandes</div>
+        <div class="d-flex justify-content-center gap-4 mt-5">
+            <a href="{{ path("admin") }}" class="btn btn-primary">Retour au PCA</a>
+            <a href="{{ path("admin_orders_add") }}" class="btn btn-primary">Créer une commande</a>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped table-hover text-center">
+        <thead class="table-dark">
+            <th>Commande</th>
+            <th>Utilisateur</th>
+            <th>Véhicule(s)</th>
+            <th>Prix total</th>
+            <th>Créée le</th>
+            <th>Date de début de location</th>
+            <th>Date de fin de location</th>
+            <th>Voir</th>
+            <th>Éditer</th>
+            <th>Supprimer</th>
+        </thead>
+
+        <tbody>
+            {% for order in orders %}
+                <tr>
+                    <td>{{ order.id }}</td>
+                    <td>{{ order.idUser.username }} ({{ order.idUser.firstName }} {{ order.idUser.name }})</td>
+                    <td>
+                        <ul class="mb-0">
+                            {% for vehicle in order.getIdVehicle() %}
+                                <li>{{ vehicle.title }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>{{ order.totalPrice }}€</td>
+                    <td>{{ order.createdAt | date('d/m/Y à H:i:s') }}</td>
+                    <td>{{ order.dateTimeDeparture | date('d/m/Y à H:i:s') }}</td>
+                    <td>{{ order.dateTimeEnd | date('d/m/Y à H:i:s') }}</td>
+                    <td><a href="{{ path("show_order", {"id": order.id }) }}" class="btn btn-info"><i class="fa-solid fa-eye"></i></a></td>
+                    <td><a href="{{ path("admin_orders_edit", {"id": order.id }) }}" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    <td><a href="{{ path("admin_orders_delete", {"id": order.id }) }}" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

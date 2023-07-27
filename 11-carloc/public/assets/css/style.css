@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ctn-base {
+    min-height: 90vh;
+}
+
+footer {
+    height: 50px;
+}
+
+.admin-img {
+    width: 100px;
+    height: 100px;
+}
+
+.banner {
+    background-image: url(../img/background/peugeot-207-cc-64b807f4795b3127377579.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
